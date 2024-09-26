@@ -1,8 +1,8 @@
 let container = document.querySelector(".container");
 let gridButton = document.getElementById("submit-grid");
 let clearGridButton = document.getElementById("clear-grid");
-let gridWidth = document.getElementById("width-rage");
-let gridHeigth = document.getElementById("height-rage");
+let gridWidth = document.getElementById("width-range");
+let gridHeigth = document.getElementById("height-range");
 let colorButton = document.getElementById("color-input");
 let eraseBtn = document.getElementById("erase-btn");
 let paintBtn = document.getElementById("paint-btn");
@@ -17,8 +17,8 @@ let events = {
   },
   touch: {
     down: "touchstart",
-    mobe: "touchmove",
-    up: "touchend",
+    move: "touchmove",
+    up: "touched",
   },
 };
 
