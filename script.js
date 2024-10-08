@@ -1,5 +1,5 @@
 let optionsButtons = document.querySelectorAll(".option-button");
-let advanceOptionButton = document.querySelectorAll(".adv-option-button");
+let advanceOptionButtons = document.querySelectorAll(".adv-option-button");
 let fontName = document.getElementById("fontName");
 let fontSizeRef = document.getElementById("fontSize");
 let writingArea = document.getElementById("text-input");
@@ -11,15 +11,15 @@ let scriptButtons = document.querySelectorAll(".script");
 
 let fontList = [
   "Arial",
-  "Verdeana",
+  "Verdana",
   "Times New Roman",
   "Garamond",
-  "Gerogia",
+  "Georgia",
   "Courier New",
   "Cursive",
 ];
 
-const intializer = () => {
+const initializer = () => {
   highlighter(alignButtons, true);
   highlighter(spacingButtons, true);
   highlighter(formatButtons, false);
@@ -52,7 +52,7 @@ optionsButtons.forEach((button) => {
   });
 });
 
-advanceOptionButton.forEach((button) => {
+advanceOptionButtons.forEach((button) => {
   button.addEventListener("change", () => {
     modifyText(button.id, false, button.value);
   });
@@ -73,15 +73,15 @@ const highlighter = (className, needsRemoval) => {
     button.addEventListener("click", () => {
       if (needsRemoval) {
         let alreadyActive = false;
-        if (button.createListList.contains("active")) {
+        if (button.classList.contains("active")) {
           alreadyActive = true;
         }
         highlighterRemover(className);
         if (!alreadyActive) {
-          button.createList.add("active");
+          button.classList.add("active");
         }
       } else {
-        button.createList.toggle("active");
+        button.classList.toggle("active");
       }
     });
   });
@@ -93,4 +93,4 @@ const highlighterRemover = (className) => {
   });
 };
 
-window.onload = intializer;
+window.onload = initializer();
