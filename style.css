@@ -30,7 +30,7 @@ body {
 }
 
 button {
-  width: 28xp;
+  width: 28px;
   height: 28px;
   display: grid;
   place-items: center;
@@ -67,12 +67,12 @@ input[type="color"] {
 
 input[type="color"]::-webkit-color-swatch {
   border-radius: 15px;
-  box-shadow: 0 0 0 2xp white, 0 0 0 3px #020929;
+  box-shadow: 0 0 0 2px white, 0 0 0 3px #020929;
 }
 
 input[type="color"]::-moz-color-swatch {
   border-radius: 15px;
-  box-shadow: 0 0 0 2xp white, 0 0 0 3px #020929;
+  box-shadow: 0 0 0 2px white, 0 0 0 3px #020929;
 }
 
 #text-input {
